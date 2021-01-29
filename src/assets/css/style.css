@@ -1,0 +1,408 @@
+:root{
+    --color-fondo: white;
+    --color-borde:#ccc;
+    --color-barra: #f13e3e;
+    --color-menu: #444444;
+    --color-a-hover: #f13e3e;
+    --color-success: rgb(62, 228, 56);
+}
+body{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+}
+.header{
+    height: 17vh;
+    width: 100%;
+    background-color: var(--color-fondo);
+    border-bottom: var(--color-borde) solid 1px;
+    border-top: var(--color-barra) solid 5px;
+}
+.center{
+    width: 75%;
+    margin: 0 auto;
+}
+.clearFix{
+    clear: both;
+}
+.logo{
+    width: 30%;
+    font-size: 30px;
+    float: left;
+    margin-top: 3%;
+}
+.appLogo{
+    display: block;
+    float: left;
+    width: 70px;
+    height: 10%;
+    margin-top: -4%;
+    margin-right: 10px;
+    animation: latir infinite 3s linear;
+}
+/*@keyframes crecer {
+    10% {
+        height: 100px;
+    }
+    100% {
+        height: 200px;
+    }
+}*/
+@keyframes latir {
+    0%{
+        transform: scale(1,1);
+    }
+    50%{
+        transform: scale(1.02,1.02);
+    }
+    55%{
+        transform: scale(0.95,0.95);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+}
+.brand{
+    display: block;
+    float: left;
+    margin: 0;
+}
+.menu{
+    width: 70%;
+    float: right;
+    font-size: 18px;
+    margin-top: 1%;
+}
+.menuUl{
+    width: 60%;
+    line-height: 200%;
+    float: right;
+}
+.li{
+    list-style: none;
+    display: inline-block;
+    height: 20%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.li a{
+    text-decoration: none;
+    color: var(--color-menu);
+    transition: 300ms all;
+}
+.li a:hover{
+    color: var(--color-a-hover);
+}
+.slider{
+    width: 100%;
+    height: 50vh;
+    color:var(--color-fondo);
+    text-shadow: 0 0 5px var(--color-menu);
+    background: rgb(196,18,36);
+    background: radial-gradient(circle, rgba(196,18,36,1) 26%, rgba(139,30,52,1) 81%);
+}
+.tittle{
+    margin-top: .2px;
+    padding: 0;
+    padding-top: 95px;
+    text-align: center;
+}
+.btnWhite{
+    display: block;
+    background-color: white;
+    color: var(--color-menu);
+    padding: .5rem;
+    width: 10%;
+    height: 10%;
+    margin: 0 auto;
+    font-size: 18px;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--color-menu);
+    transition: 300ms all;
+}
+.btnWhite:hover{
+    background-color: var(--color-menu);
+    color: white;
+
+}
+.slider.slider-small{
+    height: 25vh;
+}
+.slider-small .tittle{
+    margin-top: .2px;
+    padding: 0;
+    padding-top: 50px;
+    text-align: center;
+}
+.content{
+    width: 70%;
+    float: left;
+    min-height: 30vh;
+    margin-right: 1.5rem;
+}
+.sidebar{
+    width: 25%;
+    float: left;
+}
+.sidebarItem{
+    background-color: var(--color-borde);
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+.sidebarItem h3{
+    text-transform: uppercase;
+    font-size: 17px;
+    margin: 0;
+    border-bottom: var(--color-menu) solid 1px;
+    padding-bottom: .5rem;
+    margin-bottom: .8rem;
+}
+.btn{
+    display: block;
+    background-color: var(--color-menu);
+    color: var(--color-borde);
+    padding: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: .8rem;
+    text-decoration: none;
+    max-width: 60%;
+    border: none;
+    cursor: pointer;
+}
+.sidebarItem .btn{
+    margin: 0 auto;
+    margin-top: .8rem;
+}
+input[type="text"], textarea{
+    width: 100%;
+    height: 30px;
+    border: var(--color-menu) solid 1px;
+    padding: .3rem;
+    margin-bottom: .2rem;
+    transition: 300ms all;
+}
+textarea{
+    width: 100%;
+    height: 150px;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 150px;
+    max-height: 300px;
+}
+.midForm{
+    width: 50%;
+    margin: 0 auto;
+}
+.midForm label{
+    text-align: left;
+    display: block;
+    float: left;
+    margin-bottom: .5rem;
+    margin-top: .8rem;
+    font-size: 1rem;
+}
+.radioButton{
+    margin-top: 1rem;
+    float: left;
+    margin-bottom: .8rem;
+}
+input[type="text"]:focus, textarea:focus {
+    box-shadow: 0 0 8px var(--color-menu) inset;
+}
+.btnSuccess{
+    background-color: var(--color-success);
+    transition: 300ms all;
+}
+.btnSuccess:hover{
+    background-color: var(--color-menu);
+}
+.footer{
+    background-color: var(--color-borde);
+    width: 100%;
+    height: 10vh;
+    line-height: 65px;
+    color:var(--color-menu)
+}
+.articleItem{
+    width: 100%;
+    border-bottom: var(--color-borde) solid 1px;
+    padding-bottom: 1.3rem;
+    padding-top: 1.3rem;
+    text-align: left;
+}
+.articleItem .imageWrap{
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+    float: left;
+    margin-right: 1rem;
+    border: var(--color-borde) solid 1px;
+}
+.articleItem h2{
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-bottom: .4rem;
+}
+.articleItem .date{
+    display: block;
+    width: 100%;
+    color: var(--color-menu);
+}
+.articleItem a{
+    display: block;
+    text-decoration: none;
+    margin-top: .8rem;
+    color: var(--color-menu);
+}
+.articleItem a:hover{
+    text-decoration: underline;
+}
+.articleItem .imageWrap img{
+    width: 100%;
+    height: 100%;
+}
+.subHeader{
+    font-size: 28px;
+    padding-top: .5rem;
+    border-bottom: var(--color-borde) solid 1px;
+}
+.articleDetails .imageWrap{
+    float: none;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+}
+.articleDetails .imageWrap img{
+    width: 100%;
+    height: auto;
+}
+.articleDetails .subHeader{
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+/*RESPONSIVE*/
+/*Desde ancho 963px hasta 1488px realizar estilos*/
+
+@media (max-width:1308px){
+    /*Ejecutar estilos*/
+    .center{
+        width: 85%;
+    }
+}
+@media (max-width:1299px){
+    /*Ejecutar estilos*/
+    .center{
+        width: 85%;
+    }
+    .menuUl{
+        width: auto;
+    }
+    .logo{
+        width: 40%;
+    }
+    .menu{
+        width: auto;
+    }
+}
+
+@media (max-width:881px){
+    .menuUl{
+        width: auto;
+    }
+    .logo{
+        font-size: 1.7rem;
+    }
+    .menu{
+        font-size: 17px;
+    }
+}
+@media (max-width:847px){
+    .menu{
+        font-size: 15px;
+    }
+}
+@media (max-width:800px){
+    .content{
+        float: none;
+        width: 100%;
+    }
+    .sidebar{
+        float: none;
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+    .tittle{
+        padding-top: 115px;
+        font-size: 1.5rem;
+    }
+    .appLogo{
+        width: 40px;
+        margin-top: 1px;
+    }
+    .logo{
+        float: none;
+        margin: 0 auto;
+        margin-top: 1rem;
+        width: 70%;
+    }
+    .header{
+        height: 20vh;
+    }
+    .menu, .menuUl{
+        width: 100%;
+        clear: both;
+        margin:0;
+        padding: 0;
+        line-height: 30px;
+    }
+    .menuUl li{
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+    .slider{
+        height: 130px;
+    }
+    .slider h1{
+        font-size: 1.2rem;
+        padding-top: 30px;
+    }
+    .slider .btnWhite{
+        margin-top: 20px;
+        font-size: .7rem;
+    }
+    .slider.slider-small{
+        height: 100px;
+    }
+    .slider.slider-small h1{
+        padding-top: 35px;
+    }
+    .midForm{
+        width: 70%;
+    }
+}
+@media (max-width:429px){
+    .logo{
+        font-size: 1.4rem;
+        float: none;
+        width: auto;
+        margin: 0 auto;
+        margin-top: 1rem;
+    }
+    .menuUl li{
+        font-size: .8rem;
+    }
+    .slider .btnWhite{
+        margin-top: 10px;
+        width: 20%;
+    }
+}
