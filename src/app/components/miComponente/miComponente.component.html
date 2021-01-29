@@ -1,0 +1,9 @@
+<h1>{{titulo}}</h1>
+<p>{{comentario}}</p>
+<time>{{year}}</time>
+<span>prueba</span>
+<hr>
+<button (click)="ocultarPruebas()">Ocultar Pruebas</button>
+<div *ngIf="mostrarPruebas">
+    <pruebas></pruebas>
+</div>
