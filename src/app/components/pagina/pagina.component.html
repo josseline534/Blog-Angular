@@ -1,10 +1,11 @@
 <h1 class="subheader">{{titulo}}</h1>
 <hr>
-<div *ngIf= "nombre && apellidos">
+<div *ngIf= "nombre && apellidos; then siHayParametros else noHayParametros"></div>
+<ng-template #siHayParametros>
     <h2>El nombre: {{nombre}}</h2>
     <h2>El apellido: {{apellidos}}</h2>
-</div>
-<div *ngIf= "!nombre || !apellidos">
+</ng-template>
+<ng-template #noHayParametros>
     <h2>No hay parámetros encontrados o faltan datos</h2>
-</div>
+</ng-template>
 <button (click)="redireccion()">Nombre y apellidos</button>
