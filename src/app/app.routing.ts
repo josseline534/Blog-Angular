@@ -9,6 +9,7 @@ import { BlogComponent } from './components/blog/blog.component'
 import { FormularioComponent } from './components/formulario/formulario.component'
 import { PeliculasComponent } from './components/peliculas/peliculas.component'
 import { PaginaComponent } from './components/pagina/pagina.component'
+import { ErrorComponent } from './components/error/error.component'
 
 //Array de rutas
 const appRoutes: Routes = [
@@ -35,6 +36,10 @@ const appRoutes: Routes = [
     {
         path: 'pagina-de-pruebas',
         component: PaginaComponent
+    },
+    {
+        path: '**', //Va al final de las rutas, cuando la ruta ingresada no exista
+        component: ErrorComponent
     }
 ]
 

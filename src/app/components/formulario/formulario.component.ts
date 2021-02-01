@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formulario.component.css']
 })
 export class FormularioComponent implements OnInit {
-
-  constructor() { }
+  public titulo: string
+  constructor() {
+    this.titulo = "Formulario"
+  }
 
   ngOnInit(): void {
   }

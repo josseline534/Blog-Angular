@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent implements OnInit {
-
-  constructor() { }
+  public titulo: string
+  constructor() {
+    this.titulo = "Últimos artículos"
+  }
 
   ngOnInit(): void {
   }

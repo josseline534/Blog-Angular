@@ -1,1 +1,22 @@
-<p>formulario works!</p>
+<h1 class="subHeader">{{titulo}}</h1>
+<form class="midForm">
+    <div class="formGroup">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="">
+    </div>
+    <div class="formGroup">
+        <label for="Apellido">Apellido</label>
+        <input type="text" name="apellido" id="">
+    </div>
+    <div class="formGroup">
+        <label for="biografia">Biografía</label>
+        <textarea name="biografia" id="" cols="98" rows="10"></textarea>
+    </div>
+    <div class="formGroup radioButton">
+        <input type="radio" name="genero" id="" value="Hombre" checked>Hombre
+        <input type="radio" name="genero" id="" value="Mujer">Mujer
+        <input type="radio" name="genero" id="" value="Otro">Otro
+    </div>
+    <div class="clearFix"></div>
+    <input type="submit" class="btn btnSuccess" value="Enviar">
+</form>
