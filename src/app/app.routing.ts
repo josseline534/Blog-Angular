@@ -38,6 +38,11 @@ const appRoutes: Routes = [
         component: PaginaComponent
     },
     {
+        //parametro opcional
+        path: 'pagina-de-pruebas/:nombre/:apellidos',
+        component: PaginaComponent
+    },
+    {
         path: '**', //Va al final de las rutas, cuando la ruta ingresada no exista
         component: ErrorComponent
     }

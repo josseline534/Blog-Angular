@@ -1,1 +1,10 @@
 <h1 class="subheader">{{titulo}}</h1>
+<hr>
+<div *ngIf= "nombre && apellidos">
+    <h2>El nombre: {{nombre}}</h2>
+    <h2>El apellido: {{apellidos}}</h2>
+</div>
+<div *ngIf= "!nombre || !apellidos">
+    <h2>No hay parámetros encontrados o faltan datos</h2>
+</div>
+<button (click)="redireccion()">Nombre y apellidos</button>
