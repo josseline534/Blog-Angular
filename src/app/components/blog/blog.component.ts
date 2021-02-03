@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
   public titulo: string
+  public blogText = 'Blog'
   constructor() {
     this.titulo = "Blog !!"
   }

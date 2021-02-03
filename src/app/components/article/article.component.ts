@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticleComponent implements OnInit {
   public titulo: string
+  public homeText = 'Bienvenido al master en framework Angular'
   constructor() {
     this.titulo = "Últimos artículos"
   }

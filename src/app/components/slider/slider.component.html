@@ -1,4 +1,9 @@
-<div class="slider slider-big" id="slider">
-    <h1 class="tittle">Bienvenido al master en framework Angular</h1>
-    <a href="blog.html" CLass="btnWhite">Ir al blog</a>
+<div class="slider"
+[ngClass]="{
+    'slider-big': !size || size == 'big',
+    'slider-small': size == 'small'
+}"
+id="slider">
+    <h1 class="tittle">{{nombre}}</h1>
+    <a [routerLink]="['/blog']" CLass="btnWhite" *ngIf = "!size || size =='big'">Ir al blog</a>
 </div>

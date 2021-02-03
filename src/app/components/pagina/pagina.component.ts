@@ -11,6 +11,7 @@ export class PaginaComponent implements OnInit {
   public titulo: string
   public nombre: string
   public apellidos: string
+  public pagText = 'Bienvenido al master en framework Angular'
   constructor(
     private _route: ActivatedRoute, //sacar parametros de la url
     private _router: Router //redirecciones a otras páginas

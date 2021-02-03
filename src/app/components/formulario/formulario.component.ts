@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioComponent implements OnInit {
   public titulo: string
+  public formText = 'Bienvenido al master en framework Angular'
   constructor() {
     this.titulo = "Formulario"
   }
