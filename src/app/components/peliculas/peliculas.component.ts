@@ -11,6 +11,8 @@ export class PeliculasComponent implements OnInit {
   public titulo: string
   public peliculas: Array<Pelicula>
   public peliculaText = 'Bienvenido al master en framework Angular'
+  public favorita: Pelicula;
+  public fecha: any;
   constructor() {
     this.titulo = 'Componente Pelicula';
     this.peliculas =[
@@ -22,6 +24,7 @@ export class PeliculasComponent implements OnInit {
       new Pelicula ("Iron man 1", "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/ironman-bluray-1554389527.jpg?crop=1xw:1xh;center,top&resize=320:*", 2010),
       new Pelicula ("Batman vs Superman", "https://hipertextual.com/files/2014/05/batman-vs-superman-dawn-of-justice.jpg?width=1200&enable=upscale", 2018),
     ]
+    this.fecha= new Date(2021, 8, 12)
   }
 
   //Logica
@@ -36,5 +39,8 @@ export class PeliculasComponent implements OnInit {
   }
   cambiarTitulo() {
     this.titulo = 'Titulo nuevo';
+  }
+  mostrarFavorita(event){
+    this.favorita= event.pelicula;
   }
 }
