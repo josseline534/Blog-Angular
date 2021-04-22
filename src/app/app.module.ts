@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { routing, appRoutingProviders } from './app.routing';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MomentModule } from 'angular2-moment';
 
 import { AppComponent } from './app.component';
 import { MiComponente } from './components/miComponente/miComponente.component';
@@ -18,7 +19,10 @@ import { PaginaComponent } from './components/pagina/pagina.component';
 import { PeliculasComponent } from './components/peliculas/peliculas.component';
 import { ErrorComponent } from './components/error/error.component';
 import { PeliculaComponent } from './components/pelicula/pelicula.component';
-import {EsParPipe} from './pipes/esperar.pipe'
+import { EsParPipe } from './pipes/esperar.pipe';
+import { HomeComponent } from './components/home/home.component';
+import { ArticleDetalleComponent } from './components/article-detalle/article-detalle.component';
+import { SearchComponent } from './components/search/search.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,13 +39,17 @@ import {EsParPipe} from './pipes/esperar.pipe'
     PeliculasComponent,
     ErrorComponent,
     PeliculaComponent,
-    EsParPipe
+    EsParPipe,
+    HomeComponent,
+    ArticleDetalleComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     routing, //modulo
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MomentModule,
   ],
   providers: [appRoutingProviders], //servicio
   bootstrap: [AppComponent]

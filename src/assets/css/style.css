@@ -5,6 +5,10 @@
     --color-menu: #444444;
     --color-a-hover: #f13e3e;
     --color-success: rgb(62, 228, 56);
+    --color-warning: rgb(238, 165, 6);
+    --color-danger: rgb(238, 21, 6);
+    --color-warning-hover: rgba(238, 165, 6, 0.9);
+    --color-danger-hover: rgba(238, 21, 6, 0.9);
 }
 body{
     text-align: center;
@@ -190,6 +194,7 @@ body{
     max-width: 60%;
     border: none;
     cursor: pointer;
+    text-align: center;
 }
 .sidebarItem .btn{
     margin: 0 auto;
@@ -237,6 +242,29 @@ input[type="text"]:focus, textarea:focus {
 }
 .btnSuccess:hover{
     background-color: var(--color-menu);
+}
+.btnWarning{
+    background-color: var(--color-warning);
+    transition: 300ms all;
+    color: white !important;
+    width: 10%;
+}
+.btnWarning:hover{
+    background-color: var(--color-warning-hover);
+    text-decoration: none !important;
+}
+.btnDanger{
+    background-color: var(--color-danger);
+    transition: 300ms all;
+    color: white !important;
+    width: 10%;
+}
+.btnDanger:hover{
+    background-color: var(--color-danger-hover);
+    text-decoration: none !important;
+}
+.buttons{
+    margin: 30px;
 }
 .footer{
     background-color: var(--color-borde);

@@ -14,9 +14,19 @@ export class ArticleService {
         this.url = Global.url;
     }
     prueba(){
-        console.log(this.url);
+        console.log("Prueba del servicio de articulo");
     }
-    getArticles():Observable<any>{
-        return this._http.get(`${this.url}articles`);
+    getArticles(last:any = null):Observable<any>{
+        let articles ='articles';
+        if (last != null){
+            articles ='articles/true';
+        }
+        return this._http.get(`${this.url}${articles}`);
+    }
+    getArticleDetalle(articleId):Observable<any>{
+        return this._http.get(`${this.url}article/${articleId}`);
+    }
+    search(searchString):Observable<any>{
+        return this._http.get(`${this.url}search/${searchString}`)
     }
 }

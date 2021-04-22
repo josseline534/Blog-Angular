@@ -2,20 +2,10 @@
 <div class="center">
   <section id="content" class="content">
     <h1 class="subheader">{{titulo}}</h1>
-    <div id="articles" >
-      <article class="articleItem" id="articleTemplate" *ngFor="let article of articles">
-        <div class="imageWrap">
-            <img src= "{{url+'get-image/'+article.image}}" width="100%" height="100%" alt="{{article.title}}" srcset="" *ngIf="article.image">
-            <img src= "assets/img/no-disponible.png" width="100%" height="100%" alt="{{article.title}}" srcset="" *ngIf="!article.image">
-        </div>
-        <h2>{{article.title}}</h2>
-        <span class="date">
-            {{article.date | date: 'fullDate'}}
-        </span>
-        <a href="article.html">Leer más</a>
-        <div class="clearFix"></div>
-    </article>
-    </div>
+    <myArticle
+    [articles]="articles"
+    >
+    </myArticle>
   </section>
   <mySidebar></mySidebar>
   <div class="clearFix"></div>

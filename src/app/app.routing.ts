@@ -10,6 +10,9 @@ import { FormularioComponent } from './components/formulario/formulario.componen
 import { PeliculasComponent } from './components/peliculas/peliculas.component'
 import { PaginaComponent } from './components/pagina/pagina.component'
 import { ErrorComponent } from './components/error/error.component'
+import { HomeComponent } from './components/home/home.component'
+import { ArticleDetalleComponent } from './components/article-detalle/article-detalle.component'
+import { SearchComponent } from './components/search/search.component'
 
 //Array de rutas
 const appRoutes: Routes = [
@@ -19,11 +22,15 @@ const appRoutes: Routes = [
     },
     {
         path: 'home',
-        component: ArticleComponent
+        component: HomeComponent
     },
     {
         path: 'blog',
         component: BlogComponent
+    },
+    {
+        path: 'buscar/:search', //Va al final de las rutas, cuando la ruta ingresada no exista
+        component: SearchComponent
     },
     {
         path: 'formulario',
@@ -41,6 +48,10 @@ const appRoutes: Routes = [
         //parametro opcional
         path: 'pagina-de-pruebas/:nombre/:apellidos',
         component: PaginaComponent
+    },
+    {
+        path: 'blog/articulo/:id',
+        component: ArticleDetalleComponent
     },
     {
         path: '**', //Va al final de las rutas, cuando la ruta ingresada no exista

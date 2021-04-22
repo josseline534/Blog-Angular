@@ -1,22 +1,20 @@
-<mySlider [nombre] ="homeText" ></mySlider>
-<div class="center">
-    <section id="content" class="content">
-        <h2 class="subheader">{{titulo}}</h2>
-        <!--Listado de artículos-->
-        <div id="articles">
-            <article class="articleItem" id="articleTemplate">
-                <div class="imageWrap">
-                    <img src="assets/img/paisaje.jpg" width="100%" height="100%" alt="Paisaje" srcset="">
-                </div>
-                <h2 class="subHeader">Artículo de Prueba</h2>
-                <span class="date">
-                    Hace 5 minutos
-                </span>
-                <a href="article.html">Leer más</a>
-                <div class="clearFix"></div>
-            </article>
+<div class="loading" *ngIf="!articles">
+    Cargando...
+</div>
+<div class="loading" *ngIf="articles && articles.length == 0">
+    No se ah encontrado artículos para mostrar, intentalo más tarde...
+</div>
+<div id="articles" *ngIf="articles">
+    <article class="articleItem" id="articleTemplate" *ngFor="let article of articles">
+        <div class="imageWrap">
+            <img src= "{{url+'get-image/'+article.image}}" width="100%" height="100%" alt="{{article.title}}" srcset="" *ngIf="article.image">
+            <img src= "assets/img/no-disponible.png" width="100%" height="100%" alt="{{article.title}}" srcset="" *ngIf="!article.image">
         </div>
-    </section>
-    <mySidebar></mySidebar>
-    <div class="clearFix"></div>
+        <h2>{{article.title}}</h2>
+        <span class="date">
+            {{article.date | amLocale: 'es' | amTimeAgo}}
+        </span>
+        <a [routerLink]="['/blog/articulo', article._id]">Leer más</a>
+        <div class="clearFix"></div>
+    </article>
 </div>
