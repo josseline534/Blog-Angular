@@ -13,6 +13,7 @@ import { ErrorComponent } from './components/error/error.component'
 import { HomeComponent } from './components/home/home.component'
 import { ArticleDetalleComponent } from './components/article-detalle/article-detalle.component'
 import { SearchComponent } from './components/search/search.component'
+import { CreateComponent } from './components/create/create.component'
 
 //Array de rutas
 const appRoutes: Routes = [
@@ -31,6 +32,10 @@ const appRoutes: Routes = [
     {
         path: 'buscar/:search', //Va al final de las rutas, cuando la ruta ingresada no exista
         component: SearchComponent
+    },
+    {
+        path: 'blog/crear',
+        component: CreateComponent
     },
     {
         path: 'formulario',

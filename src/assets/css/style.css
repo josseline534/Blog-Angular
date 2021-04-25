@@ -208,6 +208,12 @@ input[type="text"], textarea{
     margin-bottom: .2rem;
     transition: 300ms all;
 }
+.btn.up_btn.afu-attach-pin{
+    display: block ;
+    width: 100% ;
+    max-width: 90% ;
+    margin-top: .8rem;
+}
 textarea{
     width: 100%;
     height: 150px;

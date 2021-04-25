@@ -4,6 +4,7 @@ import { routing, appRoutingProviders } from './app.routing';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MomentModule } from 'angular2-moment';
+import { AngularFileUploaderModule } from "angular-file-uploader";
 
 import { AppComponent } from './app.component';
 import { MiComponente } from './components/miComponente/miComponente.component';
@@ -22,7 +23,8 @@ import { PeliculaComponent } from './components/pelicula/pelicula.component';
 import { EsParPipe } from './pipes/esperar.pipe';
 import { HomeComponent } from './components/home/home.component';
 import { ArticleDetalleComponent } from './components/article-detalle/article-detalle.component';
-import { SearchComponent } from './components/search/search.component'
+import { SearchComponent } from './components/search/search.component';
+import { CreateComponent } from './components/create/create.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +44,8 @@ import { SearchComponent } from './components/search/search.component'
     EsParPipe,
     HomeComponent,
     ArticleDetalleComponent,
-    SearchComponent
+    SearchComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +53,7 @@ import { SearchComponent } from './components/search/search.component'
     FormsModule,
     HttpClientModule,
     MomentModule,
+    AngularFileUploaderModule,
   ],
   providers: [appRoutingProviders], //servicio
   bootstrap: [AppComponent]

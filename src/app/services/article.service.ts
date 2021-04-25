@@ -4,7 +4,9 @@ import {HttpClient, HttpHeaders} from '@angular/common/http'; // peticiones http
 import {Observable} from 'rxjs'; // recibir peticiones api
 import {Global} from './global'
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 
 export class ArticleService {
     public url: string;
@@ -28,5 +30,12 @@ export class ArticleService {
     }
     search(searchString):Observable<any>{
         return this._http.get(`${this.url}search/${searchString}`)
+    }
+    create(article):Observable<any>{
+        let params = JSON.stringify(article)
+        let headers = new HttpHeaders().set('Content-Type', 'application/json')
+        return this._http.post(`${this.url}save`, params, {
+            headers
+        })
     }
 }

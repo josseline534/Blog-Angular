@@ -1,0 +1,31 @@
+<div class="center">
+    <section id="content" class="content">
+        <h1 class="subHeader">{{titulo}}</h1>
+        <form class="midForm" #articuloForm = "ngForm" (ngSubmit)="onSubmit()">
+            <div class="formGroup">
+                <label for="titulo">Titulo</label>
+                <input type="text" name="titulo" id="" #titulo="ngModel" [(ngModel)]="articulo.title" required />
+                <small *ngIf="!titulo.valid && titulo.touched && titulo">
+                    El titulo no es válido
+                </small>
+            </div>
+            <div class="formGroup">
+                <label for="content">Content</label>
+                <textarea name="content" id="" cols="98" rows="10" #content="ngModel" [(ngModel)]="articulo.content" required ></textarea>
+                <small *ngIf="!content.valid && content.touched">
+                    El content no es válido
+                </small>
+            </div>
+            <div class="formGroup">
+                <angular-file-uploader
+                    [config]="afuConfig"
+                    (ApiResponse)="imageUpload($event)">
+                </angular-file-uploader>
+            </div>
+            <div class="clearFix"></div>
+            <input type="submit" class="btn btnSuccess" value="Guardar" [disabled]="articuloForm.invalid">
+        </form>
+    </section>
+    <mySidebar></mySidebar>
+    <div class="clearFix"></div>
+</div>
