@@ -1,0 +1,89 @@
+### Peticion GET
+http://localhost:1800/probando
+
+http://localhost:1800/api/test-de-controlador
+
+http://localhost:1800/api/articles/true
+
+http://localhost:1800/api/article/600a03976959bf20803b9690
+
+http://localhost:1800/api/search/hola
+
+http://localhost:1800/api/search/contenido
+
+
+### Obtener imagen
+http://localhost:1800/api/get-image/u6ux5hppdMWJqRPH8onyUEeG.png
+### POST
+POST http://localhost:1800/api/datos-curso
+Content-Type: application/json
+
+{
+    "hola": "Que tal"
+}
+
+POST http://localhost:1800/api/save
+Content-Type: application/json
+
+{
+    "title": "Titulo del articulo 7",
+    "content": "Contenido del articulo 7"
+}
+
+POST http://localhost:1800/api/save
+Content-Type: application/json
+
+{
+    "title": "Titulo del articulo",
+    "content": ""
+}
+
+POST http://localhost:1800/api/save
+Content-Type: application/json
+
+{
+    "title": "Titulo del articulo"
+}
+### Imagen post verdadero
+POST http://localhost:1800/api/upload-image/600a5413762fe218183bc7a1
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file0"; filename="1.png"
+Content-Type: image/png
+
+< ../imagen/1.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+### Video post falso
+POST http://localhost:1800/api/upload-image/600a5413762fe218183bc7a1
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file0"; filename="1.Bienvenida.mp4"
+Content-Type: video/mp4
+
+< ../imagen/1.Bienvenida.mp4
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+### PUT
+
+PUT http://localhost:1800/api/article/600a03976959bf20803b9690
+Content-Type: application/json
+
+{
+    "title": "Titulo del articulo Actualizado",
+    "content": "Contenido del artículo actualizado 1"
+}
+
+### DELETE
+DELETE http://localhost:1800/api/article/600a038c6959bf20803b968f
+
+
+POST http://localhost:1800/api/article/600a03976959bf20803b9690
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="1.png"
+Content-Type: image/png
+
+< /1.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
